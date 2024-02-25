@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            width: 100px;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> <!--Primeiro são declarados os campos input e é dado a eles uma ID.-->
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()"> <!--O botão somar recebe um evento onclick, ao qual é atribuído uma função, nomeada aqui de somar. Os parênteses indicam um chamamento de função.-->
+    <div id="res">Resultado</div> <!--É criada uma div com ID res-->
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1') //A função somar é criada. Dentro dela são criadas 2 var que receberão os valores dos inputs de números pelos IDs, em forma de string.
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res') //É criada uma var para acessar a div do resultado da soma.
+            var n1 = Number(tn1.value) //São criadas mais duas var para transformar as var tn1 e tn2 para o tipo number.
+            var n2 = Number(tn2.value)
+            var s = n1 + n2 //A var s é criada para finalmente somar as var n1 e n2.
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>.` //A var res que puxa a div do resultado é usada para alterar seu inner html para a frase contendo o resultado.
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play it yourself</title>
+    <style type="text/css">
+        div {
+            height: 200px;
+            line-height: 200px;
+            color: white;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="changeColor(this)" style="background-color: burlywood;">
+        Tap me to change my color!
+    </div>
+    <script type="text/javascript">
+        function changeColor(element) {
+        const currentColor = element.style.backgroundColor;
+        if (currentColor == "burlywood") {
+            element.style.backgroundColor = "#2885b8";
+        } else {
+            element.style.backgroundColor = "burlywood";
+        }
+     }
+     </script>
+</body>
+</html>
